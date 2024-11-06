@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
 
-function App() {
+const App = () => {
+  const Name = "Temmy"
+  const mysty ={
+    color:"blue",
+     backgroundColor:"black",
+     header:{
+      fontFamily:"san-serif",
+      fontWeight:700,
+      color:"yellow",
+      fontSize:"28px"
+     }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div style={{color:"red", backgroundColor:"black"}}>{Name}</div>
+       <h1 style={mysty}>{Math.random()}</h1>
+       <p style={mysty.header}>Internal styling</p>
+       <button className='btn btn-dark'>click</button>
+    </>
+   
+  )
 }
 
-export default App;
+export default App
