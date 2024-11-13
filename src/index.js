@@ -5,13 +5,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home';
 import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.bundle.js"
 import App from './App';
+import Todo from './Todo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
-    <Home/>
+    {/* <App/>
+    <Home/> */}
+    <Todo/>
   </React.StrictMode>
 );
 
