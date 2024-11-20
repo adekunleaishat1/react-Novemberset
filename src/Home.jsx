@@ -1,6 +1,9 @@
 import { Bs0SquareFill,Bs3CircleFill } from "react-icons/bs";
 import Firstimg from "./Images/customer-support.png"
 import { useState } from "react";
+import Button from "./Button";
+import Navbar from "./Navbar";
+import { Link, Outlet } from "react-router-dom";
 
 
 const  Home = () => { 
@@ -29,20 +32,34 @@ const  Home = () => {
       
     }
 
-
+  const Click = () =>{
+    alert("working")
+  }
 
     return(
         <div>
-            <h1 className="text-[30px] text-[#fff] bg-gray-500">WELCOME TO REACT CLASS</h1>
+          <Navbar/>
+          <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"1200px"}} >
+            <div style={{backgroundColor:"blue", height:"900px", width:"200px"}}>
+              <Link className="text-light" to="/home/todo">Todo</Link>
+              <Link className="text-light"   to="">Profile</Link>
+              <Link  className="text-light"  to="">About</Link>
+              <Link className="text-light"  to="">Resources</Link>
+            </div>
+            <div style={{backgroundColor:"white", height:"900px", width:"800px"}}>
+                <Outlet/>
+
+                <button onClick={()=>clickme(67)}>CLick</button>
+            </div>
+          </div>
+            {/* <h1 className="text-[30px] text-[#fff] bg-gray-500">WELCOME TO REACT CLASS</h1>
             <h1>{username}</h1>
             <p>{name}</p>
             <p>{users.class}</p>
             <input onChange={(e)=>setinput(e.target.value)} type="text" />
 
-            <input onChange={(e)=>handleinputchange(e)} type="text" />
-
-
-            <button onClick={()=>clickme(67)}>CLick</button>
+            <input onChange={(e)=>handleinputchange(e)} type="text" /> */}
+           
             {/* <Bs0SquareFill />
             <Bs3CircleFill />
            <img src={Firstimg} alt="" />

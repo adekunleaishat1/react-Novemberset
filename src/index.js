@@ -6,15 +6,27 @@ import reportWebVitals from './reportWebVitals';
 import Home from './Home';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.js"
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import App from './App';
 import Todo from './Todo';
+import Navbar from './Navbar';
+import Notfound from './Notfound';
+import Landing from './Landing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App/>
-    <Home/> */}
-    <Todo/>
+    <BrowserRouter>
+    {/* <Navbar/> */}
+      <Routes>
+         <Route path='/' element={<App/>}/>
+         <Route path='/*' element={<Notfound/>}/>
+        <Route path='/home' element={<Home/>}>
+          <Route path='/home' element={<Landing/>}/>
+          <Route path='/home/todo' element={<Todo/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
