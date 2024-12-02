@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "9c78",
+      "firstname": "Aishat",
+      "lastname": "Adekunle",
+      "email": "tolani@gmail.com",
+      "password": "yeesha"
+    },
+    {
+      "id": "ca58",
+      "firstname": "bolade",
+      "lastname": "Adebayo",
+      "email": "bolade@gmail.com",
+      "password": "bolade"
+    },
+    {
+      "id": "8f23",
+      "firstname": "Oreoluwa",
+      "lastname": "Badmus",
+      "email": "ore@gmail.com",
+      "password": "badmus"
+    }
+  ]
+}

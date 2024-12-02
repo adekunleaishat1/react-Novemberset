@@ -12,6 +12,8 @@ import Todo from './Todo';
 import Navbar from './Navbar';
 import Notfound from './Notfound';
 import Landing from './Landing';
+import Http from './Http';
+import Signup from './Signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +23,9 @@ root.render(
       <Routes>
          <Route path='/' element={<App/>}/>
          <Route path='/*' element={<Notfound/>}/>
+         <Route path='/http' element={<Http/>}/>
+         <Route path='/signup' element={<Signup/>}/>
+
         <Route path='/home' element={<Home/>}>
           <Route path='/home' element={<Landing/>}/>
           <Route path='/home/todo' element={<Todo/>}/>
