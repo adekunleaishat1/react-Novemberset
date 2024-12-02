@@ -20,6 +20,20 @@
       "lastname": "Badmus",
       "email": "ore@gmail.com",
       "password": "badmus"
+    },
+    {
+      "id": "665e",
+      "firstname": "Bola",
+      "lastname": "Badmus",
+      "email": "bolanle@gmail.com",
+      "password": "badmus"
+    },
+    {
+      "id": "5d08",
+      "firstname": "Tola",
+      "lastname": "Adelaja",
+      "email": "tola@gmail.com",
+      "password": "Thola"
     }
   ]
 }

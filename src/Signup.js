@@ -1,5 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import axios from 'axios'
+import { toast,ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
    const [Formdetails, setFormdetails] = useState({
@@ -29,23 +31,24 @@ const Signup = () => {
      const existuser = alluser.find((user)=> user.email == Formdetails.email)
      console.log(existuser);
      if (existuser) {
-      alert("User alredy exist")
+      toast.error("User alredy exist")
       setisloading(false)
      }else{
         axios.post("http://localhost:3456/users",Formdetails)
       .then((res)=>{
           console.log(res);
+          toast.success("Signup successful")
           setisloading(false)
           
       }).catch((err)=>{
         setisloading(false)
           console.log(err);
-          
       })
      }
      
      
     } catch (error) {
+      setisloading(false)
       console.log(error);
       
     }
@@ -72,6 +75,7 @@ const Signup = () => {
           <input onChange={(e)=>setFormdetails({...Formdetails, password:e.target.value})} className='form-control' type="password" />
         </div>
         <button disabled={isloading} onClick={signup} className='btn btn-primary'>{isloading? "Loading..." : "Register"}</button>
+        <ToastContainer/>
        </div>  
     </>
   )
